@@ -1,10 +1,7 @@
-from pytest_bdd import given, when, then, scenario
+from pytest_bdd import given, when, then, scenarios
 
-@scenario("../features/mytest.feature", "Sample test one") #To run single test
-def test_one():
-    print("Hi Test")
-    assert 1 == 1
-    pass
+#scenarios("../features/mytest.feature") #to run multiple scenarios in single file
+scenarios("../features/") #to run multiple scenarios in multiple files
 
 @given("current balance was 10")
 def balance():
